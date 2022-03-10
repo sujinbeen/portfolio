@@ -1,0 +1,868 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'IBMPlexSansKR-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+
+*{margin: 0; padding: 0;
+
+    font-family: 'IBMPlexSansKR-Bold'; 
+
+
+}
+
+
+li{list-style: none;}
+a{
+    text-decoration: none;
+    display: block;
+    color: #333;
+
+}
+
+
+html, body {
+
+    color: #333;
+    min-width: 1280px;
+    /* 이거는 모바일에서 볼 때 깨지는 현상 완하 */
+    
+   
+       
+    
+}
+
+/* header style */
+
+header{
+
+    height: 80px;
+    line-height: 80px;
+    /* 이거는 내가 글자를 적어놔서 수직가운데 정렬되는거지  */
+
+}
+
+header div{
+
+    /* height: 100%; */
+    position: relative; 
+    /* position 과 height는 글자가 아닌 이미지일때 수직가운데정렬을 위해서 필요한 것 */
+    
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* 이 밑에 태그도 글자가 아닌 이미지일때 수직가운데정렬을 위해서 필요한 것 */
+header div h1 a{
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform:translateY(-50%);
+
+}
+
+
+/* main_visual style */
+
+.main_visual{
+
+    width: 100%;
+    height: 800px;
+
+    background: url('../images/main_background.jpg') center center / cover no-repeat;
+
+    /* background: rgb(163,103,255); */
+    /* background: linear-gradient(90deg, rgba(163,103,255,1) 0%, rgba(254,83,209,1) 80%); */
+
+    /* background: url('../images/visual1-3.jpg') center center / cover no-repeat ; */
+    /* css 폴더로 따로 작성할때에는 여기서 한 단계 나가서 존재하는 폴더로 생각해야된다  그럴때는 ../ 이라고 작성하면 한 단계 전 폴더로 이동이 가능하다 */
+    /* 다이렉트로 images/ 하면서 작성해보면 안다 사진이 아무것도 보이지 않을걸? */
+    /* background-attachment: fixed; */
+    color: #333;
+
+    display: flex;
+    align-items: center;
+    /* 이거 두개가 중간 정렬 센터지만 자식div한테 넣으면 두줄이 정렬되니까 그건 안되잖아 그래서 부모태그한테 걸어준거 */
+     justify-content: center;
+    /* 이때까지는 양쪽정렬이었다면 center하면 중간정렬되는거지 */
+    /* align-items 이랑 justify랑  하나씩 주석처리하면서 어떤게 어떻게 중간정렬하는지 다시 살펴보기 */
+
+}
+
+.main_visual div .title{
+
+    text-align: left;
+    margin-bottom: 250px;
+    
+
+}
+
+
+
+.main_visual div .title h2{
+
+    font-size: 80px;
+    line-height: 90px;
+    margin-top: 20px;
+    
+
+}
+
+
+.main_visual div .name{
+
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+    
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5)
+
+    
+    
+}
+
+/* best portfolio style */
+
+.best{
+
+    margin: 150px 0;
+
+}
+
+
+.best h3{
+
+    font-size: 45px;
+    text-align: center;
+    
+    /* 만약에 우측정렬하고 싶다고 하면 꼭 아래와 같이 컨테이너 중심축을 잡아주어야 한다 */
+    /* 만약에 컨테이너 중심축을 안잡아줬다? 라고 생각하고 width 랑 margin 이랑 주석처리하면 알게될껄 그냥 저어어어 끝에 우측에 자리잡는거임  */
+
+    /* width: 1280px;
+    margin: 0 auto;
+    text-align: right; */
+
+    margin-bottom: 40px;
+    /* 항상 하단에 있는 태그가 우선시 되니까 만약에 margin-bottom 넣고 싶으면 margin 0 auto 밑으로 넣어면 돼 */
+
+}
+
+
+ .best .bg{ 
+
+    padding: 100px 0; 
+}  
+ .best .bg .best_box{
+
+    margin-bottom: 0; 
+
+
+}
+
+.best .best_box{
+
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    
+}
+
+.best .best_box .info{
+
+    width: 40%;
+
+}
+
+.best .best_box .info .cate{
+
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.best .best_box .info h4{
+
+    font-size: 30px;
+
+}
+
+.best .best_box .info .text{
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    /* 원래 폰트의 1.5~1.8배가 적당함 */
+    /* 계산 때릴 필욘 없다 그냥 1.5하면 알아서 계산해준다 */
+
+}
+
+.best .best_box .info dl{
+
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.best .best_box .info dl:nth-of-type(1) dd{
+
+    display: flex;
+
+}
+
+
+
+
+
+.best .best_box .info dl dt{
+
+    width: 28%;
+    font-weight: bold;
+
+}
+
+.best .best_box .info ul{
+
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.best .best_box .info ul li{
+
+    height: 45px;
+    line-height: 45px;
+    border: 3px solid rgb(208,242,242);
+    margin-right: 10px;
+    border-radius: 30px;
+
+
+}
+
+
+.best .best_box .info ul li a{
+
+    padding: 0 25px;
+
+}
+
+    /* 이걸왜 li 가 아니라 a 태그한테 거느냐?  */
+    /* a 태그한테 걸어야지 여백에 마우스를 올려도 링크로 연결되기 때문이다 */
+    /* 같은 맥락으로 링크가 걸려있는 곳에 padding을 줄때에는 무조건 링크 있는 곳으로 */
+
+.best .best_box .info ul li:nth-of-type(1){
+
+    background-color:rgb(208,242,242);
+    
+   
+    color: #333; 
+} 
+
+ .best .best_box .info ul li:nth-of-type(1) a{
+
+    color: #333; 
+   
+    
+} 
+
+    /* 이것도 li 태그에다가 걸면 color값이 안걸린다 */
+
+
+
+.best .best_box .youtube_list{
+
+    width: 55%;
+
+}
+
+    /* 이미 위에 justify 해놨으니까 비율조절로 텍스트랑 영상 사이에 간격 만들기 */
+
+
+
+.best .best_box .youtube_list div{
+
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+
+}
+
+.best .best_box .youtube_list div iframe{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    /* 유튜브 영상거는거 태그 다시 한번 살펴보기 */
+    /* 유튜브 비율 맞추는 부모 태그는 무조건이고 */
+    /* 그 박스 크기를 잡는 조부모태그까지 필요하다 */
+
+.best .best_box .web_design{
+
+    width: 55%;
+
+}
+
+.best .best_box .web_design figure img{
+
+    width: 100%;
+
+}
+
+    /* 가끔가다가 태그가 색상을 입혀서 활성화가 안되고 그냥 글자쓴거처럼 검정색으로 보인다면? 그거 태그 잘못 쓴거 아니고 어딘가  ; 안 닫혀있는 문제니까 위에 잘 살펴봐  */
+
+
+    /* 만약에 두번째 베스트 박스 뒤로 배경을 깔고 싶으면 인포랑 웹 사진을 감싸는 새로운 div를 만들어야 된다 */
+    /* div class= bg 라고 만들어져있는게 바로 이거! */
+    /* 왜냐면 안그러면 width 가 1280으로 걸려있으니까 */
+
+
+/* youtube category */
+
+.youtube_wrap{
+
+    margin: 150px 0 ;
+    /* 이전에도 section 끼리 여백이 150px이었다 */
+
+    /* background:rgb(208,242,242); */
+    background: url('../images/main_background.jpg') center center / cover no-repeat;
+   
+
+
+    padding: 100px 0;
+
+}
+
+.youtube_wrap h3{
+
+    color: #333;
+
+}
+
+.youtube_wrap .youtube_menu{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+   
+
+}
+
+.youtube_wrap .youtube_menu li{
+
+    height: 45px;
+    line-height: 45px;
+
+    
+
+    padding: 0 30px;
+
+    border: 3px solid #fff;
+    border-radius: 30px;
+
+
+    /* box-sizing: border-box; */
+    margin: 0 5px;
+
+
+}
+
+.youtube_wrap .youtube_menu li a{
+
+    color: #333;
+
+}
+
+    /* 안에 a 태그가 있는데 왜 padding을 여기다가 붙일까? */
+
+    /* li 인데 on 이라는 이름을 가질때 라는 뜻 */
+.youtube_wrap .youtube_menu li.on{
+
+    background-color: rgb(232, 242, 196);
+    border: 1px solid rgb(232, 242, 196);
+    box-shadow: 2px 2px 10px rgba(0,0,0, 0.5);
+
+}
+
+.youtube_wrap .youtube_menu li.on a{
+
+    color: #333;
+
+}
+
+.youtube_wrap .youtube_cont .menu_cont{
+
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 박스가 밑으로 떨어지게 하는 태그  */
+    display: none;
+
+}
+    /* 여기 ~~태그에 on이 붙었을 때 라는말 */
+.youtube_wrap .youtube_cont .menu_cont.on{
+
+    display: flex;
+
+}
+
+.youtube_wrap .youtube_cont .menu_cont .box{
+
+    width: 49%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+}
+
+.youtube_wrap .youtube_cont .menu_cont .box .youtube_list{
+
+    width: 100%;
+
+}
+
+.youtube_wrap .youtube_cont .menu_cont .box .youtube_list div{
+
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+
+}
+
+.youtube_wrap .youtube_cont .menu_cont .box .youtube_list div iframe{
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+
+.youtube_wrap .youtube_cont .menu_cont .box .info{
+
+    padding: 30px;
+
+}
+
+
+    /* 이제 좀 귀찮다 하지만 이렇게 해도 된다 */
+
+.info h4{
+
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.info dl{
+
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.info dl:nth-of-type(1) dd{
+
+    display: flex;
+
+}
+
+.info dl:nth-of-type(1) dd img{
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+
+
+.info dl dt{
+
+    width: 20%;
+    font-weight: bold;
+
+}
+
+.info dl dd a{
+
+    font-weight: bold;
+
+}
+
+.info dl dd:hover a{
+
+    text-decoration: underline;
+
+}
+
+h3{
+
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+
+}
+
+/* 2d design */
+
+
+.g_design{
+
+    
+    
+    padding: 150px 0;
+
+}
+
+.g_design em{
+
+    display: block;
+    /* em도 대표적인 inline 요소라서 일단 block 요소로 바꿔줘야 돼 */
+    
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+    margin-bottom: 10px;
+
+
+}
+
+.g_design .img_list{
+
+    width: 1280px;
+    margin: 0 auto;
+
+    /* font-size: 12px; */
+
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
+}
+
+
+
+.g_design .img_list div{
+
+    width: 24%;
+
+}
+
+
+.g_design .img_list div figure{
+
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    /* 이거는 img가 아니라 그 부모태그인 figure에가서 해야한다 */
+    
+
+}
+
+.g_design .img_list div figure img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+    /* transition은 img에 넣어줘야 한다 */
+
+}
+
+.g_design .img_list div ul{
+
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+.g_design .img_list div ul li:nth-of-type(1){
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+
+}
+
+.g_design .img_list div ul li:nth-of-type(2){
+
+    margin-bottom: 7px;
+
+}
+
+
+.g_design .img_list div ul li:nth-of-type(3){
+
+    font-size: 16px;
+
+}
+
+
+.g_design .img_list div:hover{
+
+    box-shadow: 2px 3px 20px rgba(0,0,0, 0.5);
+
+}
+
+.g_design .img_list div:hover figure img{
+
+    transform: scale(1.2);
+
+}
+
+/* footer style */
+
+footer{
+
+    background: url('../images/main_background.jpg') center center / cover no-repeat;
+    /* background-color: rgb(242,206,206); */
+    color:#333;
+    padding: 100px 0;
+    text-align: center;
+
+}
+
+
+
+footer a {
+
+    color: #333;
+
+}
+    /* a 태그만 따로 해야하는거 이해되지? */
+
+footer ul li{
+
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    border: 3px solid #fff;
+    margin: 10px auto;
+    border-radius: 50px;
+
+}
+
+footer ul li:nth-of-type(1){
+
+    background-color:rgba(242,206,206);
+    border: 1px solid rgba(242,206,206);
+    
+
+}
+
+footer ul li:nth-of-type(1) a{
+
+    color: #333;
+    font-weight: bold;
+    
+
+}
+
+footer p{
+
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
+
+
+/* web design style 3/10 */
+
+
+.web_wrap .h3{
+
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+    
+
+}
+
+
+.web_wrap { 
+    /* background-color: #ccc; */
+    /* color: #fff; */
+    margin: 150px 0;
+}
+.web_wrap .web_box {
+    width: 1280px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.web_wrap .web_box .web {
+    width: 32%;
+    margin-bottom: 50px;
+}
+.web_wrap .web_box .web figure { 
+    height: 350px;
+
+}
+.web_wrap .web figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.web_wrap .web_box .info {  
+    padding-top: 20px;
+} 
+
+
+/* info style 3/10 */
+
+.info .text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+.info ul {display: flex; margin-top: 30px;}
+.info ul li:first-of-type {
+    /* background-color: #333; */
+    background-color: rgb(208, 242, 242);
+    border: 1px solid rgb(208, 242, 242);
+}
+
+.info ul li {
+    height: 45px;
+    line-height: 45px;
+    border: 3px solid rgb(208, 242, 242);
+    margin-right: 10px;
+    /* box-sizing: border-box; */
+    border-radius: 30px;
+}
+.info ul li a {
+    padding: 0 25px;
+}
+.info ul li:first-of-type a {
+    color: #333;
+}
+
+
+/* 개인정보 스타일 3/10 */
+
+.about {
+    margin: 150px 0;
+}
+.about .about_box {
+    width: 1280px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* align-items: center; */
+
+}
+.about .about_box figure {
+    width: 40%;
+    height: 700px;
+}
+.about .about_box figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .about_box .about_info {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.about .about_box .about_info  div {
+    
+    width: 45%;
+    margin: 20px 0;
+    line-height: 1.5;
+    
+}
+
+.about .about_box .skill figure{
+
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+   
+}
+
+.about .about_box .skill figure div{
+
+    
+    width: 50%;
+    
+ 
+    
+    justify-content: center;
+    margin-top: -100px;
+    
+
+}
+
+
+.about .about_box .skill figure div img{
+
+
+    width: 120px;
+    height: 120px;
+    align-items: center;
+
+}
+
+.about .about_box .skill figure div p{
+
+    text-align: center;
+
+}
+
+
+.about h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+.about p {
+    /* margin-bottom: 5px; */
+    font-size: 16px;
+   
+}
+.about dl {
+    font-size: 16px;
+   
+}
+.about dl dt {
+    margin-bottom: 5px;
+    /* font-weight: bold; */
+}
